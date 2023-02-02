@@ -1,4 +1,4 @@
-from datetime import time
+"""from datetime import time
 from behave import *
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -35,15 +35,15 @@ def acceptCookies(context):
 @then(u'Click on contactos button')
 def pressContactButton(context):
     contact_button = "//*[@id='block-mainmenu']/ul/li[6]/a"
-    context.driver.find_element(By.XPATH, contact_button).click()
+    context.driver.find_element(By.ID, contact_button).click()
 
 
 @then(u'Fill the name field')
 def fillName(context):
     name = '//*[@id="edit-field-form-text1-0-value"]'
-    context.driver.find_element(By.XPATH, name).send_keys("This is a Test Example")
+    context.driver.find_element(By.ID, name).send_keys("This is a Test Example")
 
-"""
+
 @then(u'Fill the email field')
 def fillEmail(context):
     email = 'edit-field-form-email1-req-0-value'
@@ -77,7 +77,7 @@ def acceptPrivacity(context):
 def pressSubmitButton(context):
     submit_button = 'edit-submit'
     context.WebDriverWait(context.driver, 100).until(EC.presence_of_element_located((By.ID, submit_button))).click()
-"""
+
 @then(u'Close browser')
 def closeBrowser(context):
-    context.driver.close()
+    context.driver.close()"""
